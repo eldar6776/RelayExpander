@@ -1,0 +1,54 @@
+Altium Designer Pick and Place Locations
+I:\ProjektiOtvoreni\Sjenica\hw\RELEXP\DE-270124\Project Outputs for DE-270124\Pick Place for DE-270124.txt
+
+========================================================================================================================
+File Design Information:
+
+Date:       27/01/24
+Time:       17:49
+Revision:   0
+Variant:    No variations
+Units used: mil
+
+Designator Comment         Layer    Footprint       Center-X(mil) Center-Y(mil) Rotation Description                                                              
+C3         10uF            TopLayer 0805            4895.000      1300.000      180      Ceramic Chip Capacitor - Standard                                        
+C4         100nF           TopLayer 0603            4896.536      1230.000      180      Ceramic Chip Capacitor - Standard                                        
+K1         SRD-12VDC       TopLayer SRD-12VDC-SL-O  325.000       1710.630      90       SPDT PCB relay 12Vc coil                                                 
+K2         SRD-12VDC       TopLayer SRD-12VDC-SL-O  4075.000      1710.630      90       SPDT PCB relay 12Vc coil                                                 
+K3         SRD-12VDC       TopLayer SRD-12VDC-SL-O  2825.000      839.370       270      SPDT PCB relay 12Vc coil                                                 
+K4         SRD-12VDC       TopLayer SRD-12VDC-SL-O  950.000       1710.630      90       SPDT PCB relay 12Vc coil                                                 
+K5         SRD-12VDC       TopLayer SRD-12VDC-SL-O  4700.000      1710.630      90       SPDT PCB relay 12Vc coil                                                 
+K6         SRD-12VDC       TopLayer SRD-12VDC-SL-O  2200.000      839.370       270      SPDT PCB relay 12Vc coil                                                 
+K7         SRD-12VDC       TopLayer SRD-12VDC-SL-O  1575.000      1710.630      90       SPDT PCB relay 12Vc coil                                                 
+K8         SRD-12VDC       TopLayer SRD-12VDC-SL-O  4699.999      839.370       270      SPDT PCB relay 12Vc coil                                                 
+K9         SRD-12VDC       TopLayer SRD-12VDC-SL-O  1575.000      839.370       270      SPDT PCB relay 12Vc coil                                                 
+K10        SRD-12VDC       TopLayer SRD-12VDC-SL-O  2200.000      1710.630      90       SPDT PCB relay 12Vc coil                                                 
+K11        SRD-12VDC       TopLayer SRD-12VDC-SL-O  4074.999      839.370       270      SPDT PCB relay 12Vc coil                                                 
+K12        SRD-12VDC       TopLayer SRD-12VDC-SL-O  950.000       839.370       270      SPDT PCB relay 12Vc coil                                                 
+K13        SRD-12VDC       TopLayer SRD-12VDC-SL-O  2825.000      1710.630      90       SPDT PCB relay 12Vc coil                                                 
+K14        SRD-12VDC       TopLayer SRD-12VDC-SL-O  3449.999      839.370       270      SPDT PCB relay 12Vc coil                                                 
+K15        SRD-12VDC       TopLayer SRD-12VDC-SL-O  325.000       839.370       270      SPDT PCB relay 12Vc coil                                                 
+K16        SRD-12VDC       TopLayer SRD-12VDC-SL-O  3450.000      1710.630      90       SPDT PCB relay 12Vc coil                                                 
+P1         Header 17       TopLayer HDR1X17         5515.000      1260.000      270      Header, 17-Pin                                                           
+P2         TERMINAL BLOK 3 TopLayer TERMINAL_BLOK_3 325.000       2300.000      90       3 pinski terminal blok konektor                                          
+P3         TERMINAL BLOK 3 TopLayer TERMINAL_BLOK_3 4075.000      2300.000      90       3 pinski terminal blok konektor                                          
+P4         TERMINAL BLOK 3 TopLayer TERMINAL_BLOK_3 2825.000      250.000       270      3 pinski terminal blok konektor                                          
+P5         TERMINAL BLOK 3 TopLayer TERMINAL_BLOK_3 950.000       2300.000      90       3 pinski terminal blok konektor                                          
+P6         TERMINAL BLOK 3 TopLayer TERMINAL_BLOK_3 4700.000      2300.000      90       3 pinski terminal blok konektor                                          
+P7         TERMINAL BLOK 3 TopLayer TERMINAL_BLOK_3 2200.000      250.000       270      3 pinski terminal blok konektor                                          
+P8         TERMINAL BLOK 3 TopLayer TERMINAL_BLOK_3 1575.000      2300.000      90       3 pinski terminal blok konektor                                          
+P9         TERMINAL BLOK 3 TopLayer TERMINAL_BLOK_3 4700.000      250.000       270      3 pinski terminal blok konektor                                          
+P10        TERMINAL BLOK 3 TopLayer TERMINAL_BLOK_3 1575.000      250.000       270      3 pinski terminal blok konektor                                          
+P11        TERMINAL BLOK 3 TopLayer TERMINAL_BLOK_3 2200.000      2300.000      90       3 pinski terminal blok konektor                                          
+P12        TERMINAL BLOK 3 TopLayer TERMINAL_BLOK_3 4075.000      250.000       270      3 pinski terminal blok konektor                                          
+P13        TERMINAL BLOK 3 TopLayer TERMINAL_BLOK_3 950.000       250.000       270      3 pinski terminal blok konektor                                          
+P14        TERMINAL BLOK 3 TopLayer TERMINAL_BLOK_3 2825.000      2300.000      90       3 pinski terminal blok konektor                                          
+P15        TERMINAL BLOK 3 TopLayer TERMINAL_BLOK_3 3450.000      250.000       270      3 pinski terminal blok konektor                                          
+P16        TERMINAL BLOK 3 TopLayer TERMINAL_BLOK_3 325.000       250.000       270      3 pinski terminal blok konektor                                          
+P17        TERMINAL BLOK 2 TopLayer TERMINAL_BLOK_2 5530.000      2345.000      360      2 pinski terminal blok                                                   
+P18        TERMINAL BLOK 3 TopLayer TERMINAL_BLOK_3 3450.000      2300.000      90       3 pinski terminal blok konektor                                          
+U1         ULN2003D        TopLayer SO16_N          5245.512      1785.000      360      Seven Darlington Array                                                   
+U2         ULN2003D        TopLayer SO16_N          5245.512      1152.500      0        Seven Darlington Array                                                   
+U3         ULN2003D        TopLayer SO16_N          5245.512      520.000       360      Seven Darlington Array                                                   
+C1         22uF            TopLayer CAPPR2-5X11     5200.000      2400.000      360      Aluminum Electrolytic Capacitor, Radial Style with Long Leads: 47uF, 35V 
+C2         22uF            TopLayer CAPPR2-5X11     5200.000      2175.000      360      Aluminum Electrolytic Capacitor, Radial Style with Long Leads: 47uF, 35V 
