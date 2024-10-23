@@ -1,0 +1,26 @@
+Altium Designer Pick and Place Locations
+D:\ProjektiOtvoreni\Expanderi\Relay\hw\DE-211024\Project Outputs for DE-211024\Pick Place for ‚PCB_RelayBoard.csv
+
+========================================================================================================================
+File Design Information:
+
+Date:       23/10/24
+Time:       15:26
+Revision:   Not in VersionControl
+Variant:    No variations
+Units used: mil
+
+"Designator","Comment","Layer","Footprint","Center-X(mil)","Center-Y(mil)","Rotation","Description"
+"P32","Header 5X2","TopLayer","HDR2X5","1270.000","129.000","0","Header, 5-Pin, Dual row"
+"P29","Header 2X2","TopLayer","HDR2X2","2295.000","129.000","0","Header, 2-Pin, Dual row"
+"P26","Header 2X2","TopLayer","HDR2X2","1880.000","129.000","0","Header, 2-Pin, Dual row"
+"P23","Header 3X2","TopLayer","HDR2X3","729.921","129.000","0","Header, 3-Pin, Dual row"
+"P20","Header 3X2","TopLayer","HDR2X3","214.961","129.000","180","Header, 3-Pin, Dual row"
+"K8","RPS 8A 24VDC","TopLayer","RPS_2CO_8A_24V","1949.213","500.000","0",""
+"K7","RPS 8A 24VDC","TopLayer","RPS_2CO_8A_24V","1893.937","1018.819","180",""
+"K6","RPS 8A 24VDC","TopLayer","RPS_2CO_8A_24V","669.213","1020.000","0",""
+"K5","RPS 8A 24VDC","TopLayer","RPS_2CO_8A_24V","610.787","500.000","180",""
+"D17","1N4148","BottomLayer","SOD323","1450.000","500.000","90","General-purpose Diode"
+"D16","1N4148","BottomLayer","SOD323","2390.000","1020.000","270","General-purpose Diode"
+"D15","1N4148","BottomLayer","SOD323","170.000","1020.000","90","General-purpose Diode"
+"D14","1N4148","BottomLayer","SOD323","1110.000","500.000","270","General-purpose Diode"

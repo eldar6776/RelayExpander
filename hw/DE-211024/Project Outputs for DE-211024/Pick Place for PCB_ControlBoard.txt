@@ -1,0 +1,35 @@
+Altium Designer Pick and Place Locations
+D:\ProjektiOtvoreni\Expanderi\Relay\hw\DE-211024\Project Outputs for DE-211024\Pick Place for PCB_ControlBoard.txt
+
+========================================================================================================================
+File Design Information:
+
+Date:       23/10/24
+Time:       15:45
+Revision:   Not in VersionControl
+Variant:    No variations
+Units used: mil
+
+Designator Comment      Layer    Footprint      Center-X(mil) Center-Y(mil) Rotation Description                                                                                                   
+S3         "SW DIP-6"   TopLayer DIP-12/SW      1648.000      277.000       0        "DIP Switch, 6 Position, SPST"                                                                                
+S2         ON_OFF       TopLayer TACTILE_SWITCH 288.000       277.000       180      ""                                                                                                            
+S1         "> >"        TopLayer TACTILE_SWITCH 288.000       667.000       180      ""                                                                                                            
+R19        2K2          TopLayer ERA-0603       1898.000      727.000       270      "Rectangular Thick Film Chip Resistor, 10 Ohm to 330k Ohm Range, 0.1% and 0.5% Tolerance, 0603 Size, 0.063 W" 
+R18        2K2          TopLayer ERA-0603       1718.000      727.000       270      "Rectangular Thick Film Chip Resistor, 10 Ohm to 330k Ohm Range, 0.1% and 0.5% Tolerance, 0603 Size, 0.063 W" 
+R15        2K2          TopLayer ERA-0603       1538.000      727.000       270      "Rectangular Thick Film Chip Resistor, 10 Ohm to 330k Ohm Range, 0.1% and 0.5% Tolerance, 0603 Size, 0.063 W" 
+R14        2K2          TopLayer ERA-0603       1358.000      727.000       270      "Rectangular Thick Film Chip Resistor, 10 Ohm to 330k Ohm Range, 0.1% and 0.5% Tolerance, 0603 Size, 0.063 W" 
+R13        2K2          TopLayer ERA-0603       1170.000      732.000       270      "Rectangular Thick Film Chip Resistor, 10 Ohm to 330k Ohm Range, 0.1% and 0.5% Tolerance, 0603 Size, 0.063 W" 
+R10        2K2          TopLayer ERA-0603       998.000       727.000       270      "Rectangular Thick Film Chip Resistor, 10 Ohm to 330k Ohm Range, 0.1% and 0.5% Tolerance, 0603 Size, 0.063 W" 
+R8         2K2          TopLayer ERA-0603       818.000       727.000       270      "Rectangular Thick Film Chip Resistor, 10 Ohm to 330k Ohm Range, 0.1% and 0.5% Tolerance, 0603 Size, 0.063 W" 
+R7         2K2          TopLayer ERA-0603       638.000       727.000       270      "Rectangular Thick Film Chip Resistor, 10 Ohm to 330k Ohm Range, 0.1% and 0.5% Tolerance, 0603 Size, 0.063 W" 
+P1         "Header 9X2" TopLayer HDR2X9         1320.000      972.000       180      "Header, 9-Pin, Dual row"                                                                                     
+D9         CH8          TopLayer 1.6X0.8X0.8    1968.000      661.095       270      "High Performance Chip LED, Red"                                                                              
+D8         CH7          TopLayer 1.6X0.8X0.8    1788.000      661.095       270      "High Performance Chip LED, Red"                                                                              
+D6         CH6          TopLayer 1.6X0.8X0.8    1608.000      661.095       270      "High Performance Chip LED, Red"                                                                              
+D5         CH5          TopLayer 1.6X0.8X0.8    1428.000      661.095       270      "High Performance Chip LED, Red"                                                                              
+D4         "CH 4"       TopLayer 1.6X0.8X0.8    1248.000      661.095       270      "High Performance Chip LED, Red"                                                                              
+D3         "CH 3"       TopLayer 1.6X0.8X0.8    1068.000      661.095       270      "High Performance Chip LED, Red"                                                                              
+D2         "CH 2"       TopLayer 1.6X0.8X0.8    888.000       661.095       270      "High Performance Chip LED, Red"                                                                              
+D1         "CH 1"       TopLayer 1.6X0.8X0.8    708.000       661.095       270      "High Performance Chip LED, Red"                                                                              
+C2         ""           TopLayer 0603           288.000       437.000       180      "Ceramic Chip Capacitor - Standard"                                                                           
+C1         ""           TopLayer 0603           288.000       827.000       180      "Ceramic Chip Capacitor - Standard"                                                                           

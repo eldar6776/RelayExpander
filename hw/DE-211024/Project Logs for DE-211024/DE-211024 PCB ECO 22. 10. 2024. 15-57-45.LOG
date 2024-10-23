@@ -1,0 +1,178 @@
+Removed Pin From Net: NetName=12V Pin=U7-1
+Change Component Footprint: Designator=C12 Old Footprint=ERA-0603 New Footprint=0603
+Change Component Comment : Designator=C12 Old Comment=10K New Comment=C0603
+Change Component Designator: OldDesignator=960 NewDesignator=P16
+Change component parameters: Designator = "C12" ("C12"); Footprint = "ERA-0603"; UniqueID = "\XPAWYSOT" ("\XPAWYSOT")
+Change component parameters (AddParameter): Name = "Code_IPC"; Value = "1608 [0603]"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Code_JEITA"; Value = "0603"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink1Description"; Value = "Manufacturer Link"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink1URL"; Value = "http://www.kemet.com/"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink2Description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink2URL"; Value = "http://www.kemet.com/kemet/web/homepage/kechome.nsf/vapubfilesname/F3102TA.pdf/$file/F3102TA.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "DatasheetDocument"; Value = "Mar-2001"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LatestRevisionDate"; Value = "19-Mar-2004"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LatestRevisionNote"; Value = "Silkscreen size reduced."; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Note"; Value = "Footprint corresponds to dimensions for bulk cassette packaging. This case size has tightened tolerances."; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "PackageDocument"; Value = "Mar-2001"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "PackageReference"; Value = "0603"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Published"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "3n3"; VariantName = "[No Variations]"
+Added Component: Designator=D10(SOD323)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Manufacturer Link"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "http://www.semiconductors.philips.com/"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2Description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2URL"; Value = "http://www.semiconductors.philips.com/acrobat/datasheets/BAS321_2.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DatasheetVersion"; Value = "9-Feb-1999"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "19-Mar-2004"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Silkscreen size reduced."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageDescription"; Value = "SOD-323/SC-76; 2 Leads; Body 1.7 x 1.3 mm, (LxW)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageReference"; Value = "SOD323"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageVersion"; Value = "May-1999"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published"; Value = "17-Sep-2003"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Added Component: Designator=D11(SOD323)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Manufacturer Link"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "http://www.semiconductors.philips.com/"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2Description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2URL"; Value = "http://www.semiconductors.philips.com/acrobat/datasheets/BAS321_2.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DatasheetVersion"; Value = "9-Feb-1999"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "19-Mar-2004"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Silkscreen size reduced."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageDescription"; Value = "SOD-323/SC-76; 2 Leads; Body 1.7 x 1.3 mm, (LxW)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageReference"; Value = "SOD323"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageVersion"; Value = "May-1999"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published"; Value = "17-Sep-2003"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Added Component: Designator=D12(SOD323)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Manufacturer Link"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "http://www.semiconductors.philips.com/"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2Description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2URL"; Value = "http://www.semiconductors.philips.com/acrobat/datasheets/BAS321_2.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DatasheetVersion"; Value = "9-Feb-1999"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "19-Mar-2004"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Silkscreen size reduced."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageDescription"; Value = "SOD-323/SC-76; 2 Leads; Body 1.7 x 1.3 mm, (LxW)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageReference"; Value = "SOD323"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageVersion"; Value = "May-1999"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published"; Value = "17-Sep-2003"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Added Component: Designator=D13(SOD323)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Manufacturer Link"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "http://www.semiconductors.philips.com/"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2Description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2URL"; Value = "http://www.semiconductors.philips.com/acrobat/datasheets/BAS321_2.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DatasheetVersion"; Value = "9-Feb-1999"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "19-Mar-2004"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Silkscreen size reduced."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageDescription"; Value = "SOD-323/SC-76; 2 Leads; Body 1.7 x 1.3 mm, (LxW)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageReference"; Value = "SOD323"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageVersion"; Value = "May-1999"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published"; Value = "17-Sep-2003"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Added Component: Designator=K1(RPS 2CO 8A 24V)
+Added Component: Designator=K2(RPS 2CO 8A 24V)
+Added Component: Designator=K3(RPS 2CO 8A 24V)
+Added Component: Designator=K4(RPS 2CO 8A 24V)
+Added Component: Designator=P6(HDR2X3)
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Added Component: Designator=P9(HDR2X3)
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Added Component: Designator=P12(HDR2X2)
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Added Component: Designator=P15(HDR2X2)
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Added Component: Designator=P18(HDR2X5)
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=12V Pin=C12-2
+Added Pin To Net: NetName=+24_REL Pin=D10-1
+Added Pin To Net: NetName=REL1 Pin=D10-2
+Added Pin To Net: NetName=+24_REL Pin=D11-1
+Added Pin To Net: NetName=REL2 Pin=D11-2
+Added Pin To Net: NetName=+24_REL Pin=D12-1
+Added Pin To Net: NetName=REL3 Pin=D12-2
+Added Pin To Net: NetName=+24_REL Pin=D13-1
+Added Pin To Net: NetName=REL4 Pin=D13-2
+Added Pin To Net: NetName=COM1 Pin=K1-11
+Added Pin To Net: NetName=NC1 Pin=K1-12
+Added Pin To Net: NetName=NO1 Pin=K1-14
+Added Pin To Net: NetName=COM1 Pin=K1-21
+Added Pin To Net: NetName=NC1 Pin=K1-22
+Added Pin To Net: NetName=NO1 Pin=K1-24
+Added Pin To Net: NetName=+24_REL Pin=K1-A1
+Added Pin To Net: NetName=REL1 Pin=K1-A2
+Added Pin To Net: NetName=COM2 Pin=K2-11
+Added Pin To Net: NetName=NC2 Pin=K2-12
+Added Pin To Net: NetName=NO2 Pin=K2-14
+Added Pin To Net: NetName=COM2 Pin=K2-21
+Added Pin To Net: NetName=NC2 Pin=K2-22
+Added Pin To Net: NetName=NO2 Pin=K2-24
+Added Pin To Net: NetName=+24_REL Pin=K2-A1
+Added Pin To Net: NetName=REL2 Pin=K2-A2
+Added Pin To Net: NetName=COM3 Pin=K3-11
+Added Pin To Net: NetName=NO3 Pin=K3-14
+Added Pin To Net: NetName=NetK3_21 Pin=K3-21
+Added Pin To Net: NetName=NetK3_21 Pin=K3-24
+Added Pin To Net: NetName=+24_REL Pin=K3-A1
+Added Pin To Net: NetName=REL3 Pin=K3-A2
+Added Pin To Net: NetName=NetK4_11 Pin=K4-11
+Added Pin To Net: NetName=NetK4_11 Pin=K4-14
+Added Pin To Net: NetName=COM4 Pin=K4-21
+Added Pin To Net: NetName=NO4 Pin=K4-24
+Added Pin To Net: NetName=+24_REL Pin=K4-A1
+Added Pin To Net: NetName=REL4 Pin=K4-A2
+Added Pin To Net: NetName=NC1 Pin=P6-1
+Added Pin To Net: NetName=NC1 Pin=P6-2
+Added Pin To Net: NetName=COM1 Pin=P6-3
+Added Pin To Net: NetName=COM1 Pin=P6-4
+Added Pin To Net: NetName=NO1 Pin=P6-5
+Added Pin To Net: NetName=NO1 Pin=P6-6
+Added Pin To Net: NetName=NC2 Pin=P9-1
+Added Pin To Net: NetName=NC2 Pin=P9-2
+Added Pin To Net: NetName=COM2 Pin=P9-3
+Added Pin To Net: NetName=COM2 Pin=P9-4
+Added Pin To Net: NetName=NO2 Pin=P9-5
+Added Pin To Net: NetName=NO2 Pin=P9-6
+Added Pin To Net: NetName=COM3 Pin=P12-1
+Added Pin To Net: NetName=COM3 Pin=P12-2
+Added Pin To Net: NetName=NO3 Pin=P12-3
+Added Pin To Net: NetName=NO3 Pin=P12-4
+Added Pin To Net: NetName=COM4 Pin=P15-1
+Added Pin To Net: NetName=COM4 Pin=P15-2
+Added Pin To Net: NetName=NO4 Pin=P15-3
+Added Pin To Net: NetName=NO4 Pin=P15-4
+Added Pin To Net: NetName=REL1 Pin=P18-1
+Added Pin To Net: NetName=REL1 Pin=P18-2
+Added Pin To Net: NetName=REL2 Pin=P18-3
+Added Pin To Net: NetName=REL2 Pin=P18-4
+Added Pin To Net: NetName=REL3 Pin=P18-5
+Added Pin To Net: NetName=REL3 Pin=P18-6
+Added Pin To Net: NetName=REL4 Pin=P18-7
+Added Pin To Net: NetName=REL4 Pin=P18-8
+Added Pin To Net: NetName=+24_REL Pin=P18-9
+Added Pin To Net: NetName=+24_REL Pin=P18-10
+Added Pin To Net: NetName=NetD7_2 Pin=U7-1
+Added Pin To Net: NetName=12V Pin=U7-5
+Added Member To Class: ClassName=DE-211024_2 Member=Component D10 1N4148
+Added Member To Class: ClassName=DE-211024_2 Member=Component D11 1N4148
+Added Member To Class: ClassName=DE-211024_2 Member=Component D12 1N4148
+Added Member To Class: ClassName=DE-211024_2 Member=Component D13 1N4148
+Added Member To Class: ClassName=DE-211024_2 Member=Component K1 RPS 8A 24VDC
+Added Member To Class: ClassName=DE-211024_2 Member=Component K2 RPS 8A 24VDC
+Added Member To Class: ClassName=DE-211024_2 Member=Component K3 RPS 8A 24VDC
+Added Member To Class: ClassName=DE-211024_2 Member=Component K4 RPS 8A 24VDC
+Added Member To Class: ClassName=DE-211024_2 Member=Component P6 Header 3X2
+Added Member To Class: ClassName=DE-211024_2 Member=Component P9 Header 3X2
+Added Member To Class: ClassName=DE-211024_2 Member=Component P12 Header 2X2
+Added Member To Class: ClassName=DE-211024_2 Member=Component P15 Header 2X2
+Added Member To Class: ClassName=DE-211024_2 Member=Component P18 Header 5X2

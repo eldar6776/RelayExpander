@@ -1,0 +1,30 @@
+Move Component(s) Origin to Grid
+Filename     : D:\ProjektiOtvoreni\Expanderi\Relay\hw\DE-211024\PCB_ControlBoard.PcbDoc
+Date         : 23. 10. 2024.
+Time         : 15:09:35
+Time Elapsed : 00:00:00
+
+
+    DIP Component S3-SW DIP-6 (1648mil,4925mil) on Top Layer - Component pads are OFF grid. No action taken.
+    Component S2-ON_OFF (288mil,4925mil) on Top Layer - Component pads are OFF grid. No action taken.
+    Component S1-> > (288mil,5315mil) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component R19-2K2 (1898mil,5375mil) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component R18-2K2 (1718mil,5375mil) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component R15-2K2 (1538mil,5375mil) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component R14-2K2 (1358mil,5375mil) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component R13-2K2 (1170mil,5380mil) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component R10-2K2 (998mil,5375mil) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component R8-2K2 (818mil,5375mil) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component R7-2K2 (638mil,5375mil) on Top Layer - Component pads are OFF grid. No action taken.
+    DIP Component P1-Header 9X2 (1720mil,5670mil) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component D9-CH8 (1968mil,5309.095mil) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component D8-CH7 (1788mil,5309.095mil) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component D6-CH6 (1608mil,5309.095mil) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component D5-CH5 (1428mil,5309.095mil) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component D4-CH 4 (1248mil,5309.095mil) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component D3-CH 3 (1068mil,5309.095mil) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component D2-CH 2 (888mil,5309.095mil) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component D1-CH 1 (708mil,5309.095mil) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component C2 (288mil,5085mil) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component C1 (288mil,5475mil) on Top Layer - Component pads are OFF grid. No action taken.
+count : 22

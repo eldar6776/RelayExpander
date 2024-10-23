@@ -1,0 +1,86 @@
+Removed Pin From Net: NetName=COM3 Pin=K3-11
+Removed Pin From Net: NetName=COM4 Pin=K4-11
+Removed Pin From Net: NetName=COM7 Pin=K7-11
+Removed Pin From Net: NetName=COM8 Pin=K8-21
+Removed Pin From Net: NetName=_COM3 Pin=P14-3
+Removed Pin From Net: NetName=_COM3 Pin=P14-4
+Removed Pin From Net: NetName=_NO3 Pin=P14-5
+Removed Pin From Net: NetName=_NO3 Pin=P14-6
+Change Component Footprint: Designator=P12 Old Footprint=HDR2X3 New Footprint=HDR2X2
+Change Component Footprint: Designator=P15 Old Footprint=HDR2X3 New Footprint=HDR2X2
+Change Component Footprint: Designator=P16 Old Footprint=HDR2X3 New Footprint=HDR2X2
+Change Component Footprint: Designator=P26 Old Footprint=HDR2X3 New Footprint=HDR2X2
+Change Component Footprint: Designator=P28 Old Footprint=HDR2X3 New Footprint=HDR2X2
+Change Component Footprint: Designator=P29 Old Footprint=HDR2X3 New Footprint=HDR2X2
+Change Component Footprint: Designator=P30 Old Footprint=HDR2X3 New Footprint=HDR2X2
+Change Component Footprint: Designator=P14 Old Footprint=HDR2X3 New Footprint=TERMINAL BLOK 2
+Change Component Footprint: Designator=P13 Old Footprint=TERMINAL BLOK 3 New Footprint=HDR2X2
+Change Component Footprint: Designator=P17 Old Footprint=TERMINAL BLOK 3 New Footprint=TERMINAL BLOK 2
+Change Component Footprint: Designator=P27 Old Footprint=TERMINAL BLOK 3 New Footprint=TERMINAL BLOK 2
+Change Component Footprint: Designator=P31 Old Footprint=TERMINAL BLOK 3 New Footprint=TERMINAL BLOK 2
+Change Component Comment : Designator=P12 Old Comment=Header 3X2 New Comment=Header 2X2
+Change Component Comment : Designator=P15 Old Comment=Header 3X2 New Comment=Header 2X2
+Change Component Comment : Designator=P16 Old Comment=Header 3X2 New Comment=Header 2X2
+Change Component Comment : Designator=P26 Old Comment=Header 3X2 New Comment=Header 2X2
+Change Component Comment : Designator=P28 Old Comment=Header 3X2 New Comment=Header 2X2
+Change Component Comment : Designator=P29 Old Comment=Header 3X2 New Comment=Header 2X2
+Change Component Comment : Designator=P30 Old Comment=Header 3X2 New Comment=Header 2X2
+Change Component Comment : Designator=P14 Old Comment=Header 3X2 New Comment=RELAY 3
+Change Component Comment : Designator=P22 Old Comment=REALAY 5 New Comment=RELAY 5
+Change Component Comment : Designator=P25 Old Comment=REALAY 6 New Comment=RELAY 6
+Change Component Comment : Designator=P27 Old Comment=REALAY 7 New Comment=RELAY 7
+Change Component Comment : Designator=P31 Old Comment=REALAY 8 New Comment=RELAY 8
+Change Component Comment : Designator=P13 Old Comment=RELAY 3 New Comment=Header 2X2
+Change component parameters: Designator = "P13" ("P13"); Footprint = "TERMINAL BLOK 3"; UniqueID = "\RJEDJBYU" ("\RJEDJBYU")
+Change component parameters (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Change component parameters: Designator = "P14" ("P14"); Footprint = "HDR2X3"; UniqueID = "\GHIVHYVX" ("\GHIVHYVX")
+Added Pin To Net: NetName=_COM3 Pin=P13-1
+Added Pin To Net: NetName=_NO3 Pin=P13-4
+Added Pin To Net: NetName=_COM3 Pin=P14-1
+Added Pin To Net: NetName=_NO3 Pin=P14-2
+Added Pin To Net: NetName=NetD7_2 Pin=U7-1
+Change Net Name : Old Net Name=_COM4 New Net Name=_NO4
+Change Net Name : Old Net Name=_COM7 New Net Name=_NO7
+Change Net Name : Old Net Name=_COM8 New Net Name=_NO8
+Change Net Name : Old Net Name=_NC4 New Net Name=_COM4
+Change Net Name : Old Net Name=_NC7 New Net Name=_COM7
+Change Net Name : Old Net Name=_NC8 New Net Name=_COM8
+Change Net Name : Old Net Name=COM3 New Net Name=NO3
+Change Net Name : Old Net Name=COM4 New Net Name=NO4
+Change Net Name : Old Net Name=COM7 New Net Name=NO7
+Change Net Name : Old Net Name=COM8 New Net Name=NO8
+Added Pin To Net: NetName=COM3 Pin=K3-11
+Added Pin To Net: NetName=COM3 Pin=P12-1
+Added Pin To Net: NetName=COM3 Pin=P12-2
+Added Net: Name=COM3
+Added Pin To Net: NetName=COM4 Pin=K4-11
+Added Pin To Net: NetName=COM4 Pin=P15-1
+Added Pin To Net: NetName=COM4 Pin=P15-2
+Added Net: Name=COM4
+Added Pin To Net: NetName=COM7 Pin=K7-11
+Added Pin To Net: NetName=COM7 Pin=P26-1
+Added Pin To Net: NetName=COM7 Pin=P26-2
+Added Net: Name=COM7
+Added Pin To Net: NetName=COM8 Pin=K8-21
+Added Pin To Net: NetName=COM8 Pin=P29-1
+Added Pin To Net: NetName=COM8 Pin=P29-2
+Added Net: Name=COM8
+Added Pin To Net: NetName=NetK3_14 Pin=K3-14
+Added Pin To Net: NetName=NetK3_14 Pin=K3-24
+Added Net: Name=NetK3_14
+Added Pin To Net: NetName=NetK4_14 Pin=K4-14
+Added Pin To Net: NetName=NetK4_14 Pin=K4-24
+Added Net: Name=NetK4_14
+Added Pin To Net: NetName=NetK7_14 Pin=K7-14
+Added Pin To Net: NetName=NetK7_14 Pin=K7-24
+Added Net: Name=NetK7_14
+Added Pin To Net: NetName=NetK8_14 Pin=K8-14
+Added Pin To Net: NetName=NetK8_14 Pin=K8-24
+Added Net: Name=NetK8_14
+Added Rule: Name=Schematic Supply Nets
+Added Rule: Name=Schematic Supply Nets_1
+Added Rule: Name=Schematic Supply Nets_2
+Added Rule: Name=Schematic Supply Nets_3
+Added Rule: Name=Schematic Supply Nets_4
