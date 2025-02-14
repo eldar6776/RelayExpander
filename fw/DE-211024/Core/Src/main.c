@@ -90,20 +90,21 @@ volatile uint32_t last_increment_time = 0;
 uint8_t button_select_prev = 0, button_onoff_prev = 0;
 
 // Definicije za stanja releja
-uint8_t relay_states[8] = {0};  // Trenutnostanje releja
+uint8_t relay_states[8] = {0};      // Trenutnostanje releja
 uint8_t relay_old_states[8] = {0};  // Flagovi promjene stanja releja
-uint8_t relay_duty_cycle = 50;  // Pocetni duty cycle (50%)
+uint8_t relay_duty_cycle = 50;      // Pocetni duty cycle (50%)
 
-static uint32_t current_tick = 0;  // trenutni vremenski otisak
-static uint32_t pause_tick = 0;    // vremenski otisak za pauzu od 10000ms
+static uint32_t current_tick = 0;   // trenutni vremenski otisak
+static uint32_t pause_tick = 0;     // vremenski otisak za pauzu od 10000ms
 static uint32_t pause = 100;
-static uint8_t i = 0;              // trenutni broj releja
-static uint8_t t = 0;              // stanje releja (0 ili 1)
+static uint8_t i = 0;               // trenutni broj releja
+static uint8_t t = 0;               // stanje releja (0 ili 1)
 
 static uint8_t my_address = 0;
 static uint16_t rel_start = 0;
 static uint16_t rel_end = 0;
 bool init_tf = false;
+bool restart = false;
 uint8_t rec, multiplier = 1;
 /* USER CODE END PV */
 
@@ -122,6 +123,46 @@ void RS485_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+/**
+  * @brief  staticka inline funkcija pauze 1~2ms za kašnjenje odgovora za stabilne repeatere
+  *         u interruptu se ne može koristiti HAL_GetTick ni HAL_Delay tako da ova funkcija
+  *         obezbjeduje kašnjenje oko 1 ms bez hal drivera gubljenjem vremena izvršavanjem
+  *         ciklusa koji ne rade ništa
+  * @param
+  * @retval
+  */
+static inline void delay_us(uint32_t us) {
+    volatile uint32_t cycles = (HAL_RCC_GetHCLKFreq() / 20000000) * us;  // Smanjen faktor
+    while (cycles--) {
+        __asm volatile("NOP");  // Izbegava optimizaciju
+    }
+}
+/**
+  * @brief  mali efekt sa LED diodama prednjeg panela kod ukljucenja
+  * @param
+  * @retval
+  */
+void start_effect(void) {
+    const uint8_t order[][2] = {
+        {4, 5}, {3, 6}, {2, 7}, {1, 8}, // Paljenje
+        {4, 5}, {3, 6}, {2, 7}, {1, 8}  // Gašenje
+    };
+    HAL_Delay(300);
+    for (int i = 0; i < 8; i++) {
+        GPIO_PinState state = (i < 4) ? GPIO_PIN_SET : GPIO_PIN_RESET;
+        HAL_GPIO_WritePin(LED_PORT[order[i][0] - 1], LED_PIN[order[i][0] - 1], state);
+        HAL_GPIO_WritePin(LED_PORT[order[i][1] - 1], LED_PIN[order[i][1] - 1], state);
+        HAL_Delay(50);
+#ifdef USE_WATCHDOG
+        HAL_IWDG_Refresh(&hiwdg);
+#endif
+    }
+}
+/**
+  * @brief  podesi adresu modula dimera na busu prema poziciji DIP switcha
+  * @param
+  * @retval
+  */
 void get_address(void)
 {
     my_address = 0;
@@ -137,12 +178,17 @@ void get_address(void)
         rel_end = rel_start + (NUMBER_OF_RELAY*multiplier)-1;
     }
 }
-
+/**
+  * @brief  funkcija za kontrolu releja koja kod uključenja relej starta sa punim izlazom a nakon
+  *         inicijalnog stanja prelazi u 60% pwm mod, tako da je grijanje releja svedeno na minimum
+  * @param
+  * @retval
+  */
 void relay_update(uint8_t relay_num, uint8_t state)
 {
     static uint32_t last_state[8] = {0};        // flag prošlog stanaja tako da sam o prva promjena utiče na funkciju
     static uint32_t last_change_time[8] = {0};  // Čuvanje vremena poslednje promene stanja za svaki relej
-    static uint32_t pwm_duty_cycle[8] = {100};  // Početni duty cycle za svaki relej (100% kada je uključen)
+    static uint32_t pwm_duty_cycle[8] = {0};  // Početni duty cycle za svaki relej (100% kada je uključen)
     uint32_t current_tick = HAL_GetTick();      // Vreme u milisekundama
 
     // Proveri sve releje svaki put kada se funkcija pozove
@@ -183,7 +229,11 @@ void relay_update(uint8_t relay_num, uint8_t state)
 
     }
 }
-
+/**
+  * @brief  kopira stanje izlaza na LED prednjeg panela
+  * @param
+  * @retval
+  */
 void refresh_led(void)
 {
     for (uint8_t i = 0; i < 8; i++)
@@ -191,7 +241,11 @@ void refresh_led(void)
         HAL_GPIO_WritePin(LED_PORT[i], LED_PIN[i], (relay_states[i] > 0) ? GPIO_PIN_SET : GPIO_PIN_RESET);
     }
 }
-
+/**
+  * @brief  reaguje na pritisak tastera na prednjem panelu modula
+  * @param
+  * @retval
+  */
 void handle_buttons(void)
 {
     uint32_t current_time = HAL_GetTick();
@@ -207,6 +261,7 @@ void handle_buttons(void)
             menu_timer = current_time + MENU_TIMEOUT;
             last_press_time = current_time; // load first press time
             refresh_led();
+            get_address();
             HAL_Delay(BUTTON_PAUSE);
         }
         else if (error_state && (current_time - last_press_time > RESET_PRESS_MIN))
@@ -238,7 +293,11 @@ void handle_buttons(void)
         HAL_Delay(BUTTON_PAUSE);
     }
 }
-
+/**
+  * @brief  logika korisnickog menija sa led diodama i tasterima na prednjem panelu modula
+  * @param
+  * @retval
+  */
 void menu_logic(void)
 {
     uint32_t current_time = HAL_GetTick();
@@ -268,6 +327,13 @@ void menu_logic(void)
         last_toggle_time = current_time;
     }
 }
+/**
+  * @brief  funkcija obezbjeđuje ispravan poziv update releja kod 
+  *         brze izmjene stanja sa busa, svaki relej će preći iz 
+  *         100% u 60% pwm mod kada je uključen
+  * @param
+  * @retval
+  */
 void set_relay(void)
 {
     static uint32_t set_tmr = 0;
@@ -327,22 +393,28 @@ int main(void)
     MX_TIM3_Init();
     MX_USART1_UART_Init();
     /* USER CODE BEGIN 2 */
-
-
     RS485_Init();
+    start_effect();
+    start_effect();
+    start_effect();
+    get_address();
     /* USER CODE END 2 */
 
     /* Infinite loop */
     /* USER CODE BEGIN WHILE */
     while (1)
     {
+        if(restart == true) Error_Handler();
         handle_buttons();
         menu_logic();
         /* USER CODE END WHILE */
 
         /* USER CODE BEGIN 3 */
-        get_address();
         set_relay();
+
+#ifdef USE_WATCHDOG
+        HAL_IWDG_Refresh(&hiwdg);
+#endif
     }
     /* USER CODE END 3 */
 }
@@ -753,20 +825,21 @@ static void MX_GPIO_Init(void)
 
 /* USER CODE BEGIN 4 */
 /**
-  * @brief
+  * @brief  Sluša bus za paket sa BINARY_SET tipom i provjerava adresirani izlaz 
+  *         ako je u sopstvenom opsegu reaguje na ostale ne odgovara
   * @param
   * @retval
   */
-TF_Result BINARY_Listener(TinyFrame *tf, TF_Msg *msg)
+TF_Result BINARY_SET_Listener(TinyFrame *tf, TF_Msg *msg)
 {
-    uint8_t idx = 0;
     uint8_t res = 0;
-    uint16_t adr = ((msg->data[0] << 8) | msg->data[1]); // Kombinacija dva bajta u adresu
-    uint8_t ret[1]; // Niz za vraćanje stanja
+    uint16_t adr = (uint16_t) (msg->data[0] << 8) | msg->data[1]; // Kombinacija dva bajta u adresu
+    uint8_t idx = adr - rel_start; // Izračunavanje indeksa releja
+    uint8_t ret[4]; // Niz za vraćanje stanja
 
     // Proveravamo da li je adresa unutar opsega rel_start i rel_end
-    if (adr >= rel_start && adr <= rel_end) {
-        idx = adr - rel_start; // Izračunavanje indeksa releja
+    if (my_address && adr && (adr >= rel_start) && (adr <= rel_end)) {
+
         if (msg->data[2] == 0x01) {
             relay_states[idx] = 1;  // Uključivanje releja
         } else if (msg->data[2] == 0x02) {
@@ -777,42 +850,70 @@ TF_Result BINARY_Listener(TinyFrame *tf, TF_Msg *msg)
 
     // Ako je došlo do promene stanja, vraćamo novo stanje
     if (res == 1) {
+        ret[0] = msg->data[0];
+        ret[1] = msg->data[1];
         if (relay_states[idx] == 1) {
-            ret[0] = 1;  // Stanje 1 (ON)
+            ret[2] = 1;  // Stanje 1 (ON)
         } else {
-            ret[0] = 2;  // Stanje 2 (OFF)
+            ret[2] = 2;  // Stanje 2 (OFF)
         }
-
+        ret[3] = ACK;
         msg->data = ret;  // Postavljamo novi niz za odgovor
-        msg->len = 1;  // Dužina odgovora je 1
+        msg->len = 4;  // Dužina odgovora je 4
         TF_Respond(tf, msg);  // Odgovaramo sa novim stanjem
     }
 
     return TF_STAY;  // Održavanje trenutnog stanja
 }
 /**
-  * @brief
+  * @brief  Sluša bus za paket sa BINARY_GET tipom i provjerava adresirani izlaz 
+  *         ako je u sopstvenom opsegu odgovara sa stanjem na ostale ne odgovara
   * @param
   * @retval
   */
-TF_Result STATUS_Listener(TinyFrame *tf, TF_Msg *msg)
+TF_Result BINARY_GET_Listener(TinyFrame *tf, TF_Msg *msg)
 {
-    uint16_t adr = ((msg->data[0] << 8) | msg->data[1]);  // Kombinacija dva bajta u adresu
-    uint8_t ret[1]; // Niz za vraćanje stanja
+    uint16_t adr = (uint16_t) (msg->data[0] << 8) | msg->data[1]; // Kombinacija dva bajta u adresu
+    uint8_t idx = adr - rel_start; // Izračunavanje indeksa releja
+    uint8_t ret[3]; // Niz za vraćanje stanja
 
     // Proveravamo da li je adresa unutar opsega rel_start i rel_end
-    if (adr >= rel_start && adr <= rel_end) {
-        uint8_t idx = adr - rel_start;  // Izračunavanje indeksa releja
-        // Vraćamo stanje releja na toj adresi
+    if (my_address && adr && (adr >= rel_start) && (adr <= rel_end)) {
+        ret[0] = msg->data[0];
+        ret[1] = msg->data[1];
         if (relay_states[idx] == 1) {
-            ret[0] = 1;  // Stanje 1 (ON)
+            ret[2] = 1;  // Stanje 1 (ON)
         } else {
-            ret[0] = 2;  // Stanje 2 (OFF)
+            ret[2] = 2;  // Stanje 2 (OFF)
         }
+        msg->data = ret;  // Postavljamo novi niz za odgovor
+        msg->len = 3;  // Dužina odgovora je 3
+        TF_Respond(tf, msg);  // Odgovaramo sa novim stanjem
+    }
 
-        msg->data = ret;  // Postavljamo novi niz sa stanjem releja
-        msg->len = 1;  // Dužina odgovora je 1 (samo jedan bajt)
-        TF_Respond(tf, msg);  // Odgovaramo sa stanjem releja
+    return TF_STAY;  // Održavanje trenutnog stanja
+}
+/**
+  * @brief  Sluša bus za paket sa BINARY_RESET tipom i provjerava adresirani izlaz 
+  *         ako je u sopstvenom opsegu setuje flag odgovara i nakon odogovora pokreće reset
+  * @param
+  * @retval
+  */
+TF_Result BINARY_RESET_Listener(TinyFrame *tf, TF_Msg *msg)
+{
+    uint16_t adr = (uint16_t) (msg->data[0] << 8) | msg->data[1]; // Kombinacija dva bajta u adresu
+    uint8_t idx = adr - rel_start; // Izračunavanje indeksa releja
+    uint8_t ret[3]; // Niz za vraćanje stanja
+
+    // Proveravamo da li je adresa unutar opsega rel_start i rel_end
+    if (my_address && adr && (adr >= rel_start) && (adr <= rel_end)) {
+        restart = true; // setujemo flag a ne restartujemo odmah da bi vratili odgovor
+        ret[0] = msg->data[0];
+        ret[1] = msg->data[1];
+        ret[2] = ACK; 
+        msg->data = ret;  // Postavljamo novi niz za odgovor
+        msg->len = 3;  // Dužina odgovora je 3
+        TF_Respond(tf, msg);  // Odgovaramo sa novim stanjem
     }
 
     return TF_STAY;  // Održavanje trenutnog stanja
@@ -826,8 +927,9 @@ void RS485_Init(void)
 {
     if(!init_tf) {
         init_tf = TF_InitStatic(&tfapp, TF_SLAVE);
-        TF_AddTypeListener(&tfapp, V_STATUS, STATUS_Listener);
-        TF_AddTypeListener(&tfapp, S_BINARY, BINARY_Listener);
+        TF_AddTypeListener(&tfapp, BINARY_GET, BINARY_GET_Listener);
+        TF_AddTypeListener(&tfapp, BINARY_SET, BINARY_SET_Listener);
+        TF_AddTypeListener(&tfapp, BINARY_RESET, BINARY_RESET_Listener);
     }
     HAL_UART_Receive_IT(&huart1, &rec, 1);
 }
@@ -849,6 +951,7 @@ void RS485_Tick(void)
   */
 void TF_WriteImpl(TinyFrame *tf, const uint8_t *buff, uint32_t len)
 {
+    delay_us(2000); // puza kod odgovora zbog repeatera na linji 
     HAL_UART_Transmit(&huart1,(uint8_t*)buff, len, RESP_TOUT);
     HAL_UART_Receive_IT(&huart1, &rec, 1);
 }
@@ -903,7 +1006,7 @@ void Error_Handler(void)
     HAL_UART_MspDeInit(&huart1);
     while (1)
     {
-        HAL_NVIC_SystemReset();  
+        HAL_NVIC_SystemReset();
     }
     /* USER CODE END Error_Handler_Debug */
 }

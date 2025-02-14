@@ -1,4 +1,4 @@
-de-211024/main.o: ..\Core\Src\main.c ..\Core\Inc\main.h \
+de-211024/common.o: ..\..\..\..\..\Common\common.c ..\Core\Inc\main.h \
   ..\Drivers\STM32F0xx_HAL_Driver\Inc\stm32f0xx_hal.h \
   ..\Core\Inc\stm32f0xx_hal_conf.h \
   ..\Drivers\STM32F0xx_HAL_Driver\Inc\stm32f0xx_hal_rcc.h \
@@ -40,6 +40,4 @@ de-211024/main.o: ..\Core\Src\main.c ..\Core\Inc\main.h \
   C:\Keil\ARM\ARMCLANG\Bin\..\include\stdbool.h \
   C:\Keil\ARM\ARMCLANG\Bin\..\include\string.h \
   ..\..\..\..\..\Common\TF_Config.h \
-  C:\Keil\ARM\ARMCLANG\Bin\..\include\stdio.h \
-  C:\Keil\ARM\ARMCLANG\Bin\..\include\stdarg.h \
-  C:\Keil\ARM\ARMCLANG\Bin\..\include\stdlib.h
+  C:\Keil\ARM\ARMCLANG\Bin\..\include\stdio.h

@@ -1,5 +1,5 @@
-de-211024/tinyframe.o: ..\Middlewares\TinyFrame\TinyFrame.c \
-  ..\Middlewares\TinyFrame\TinyFrame.h \
+de-211024/tinyframe.o: ..\..\..\..\..\Common\TinyFrame.c \
+  ..\..\..\..\..\Common\TinyFrame.h \
   C:\Keil\ARM\ARMCLANG\Bin\..\include\stdint.h \
   C:\Keil\ARM\ARMCLANG\Bin\..\include\stdbool.h \
   C:\Keil\ARM\ARMCLANG\Bin\..\include\stddef.h \
@@ -38,8 +38,8 @@ de-211024/tinyframe.o: ..\Middlewares\TinyFrame\TinyFrame.c \
   ..\Drivers\STM32F0xx_HAL_Driver\Inc\stm32f0xx_hal_tim_ex.h \
   ..\Drivers\STM32F0xx_HAL_Driver\Inc\stm32f0xx_hal_uart.h \
   ..\Drivers\STM32F0xx_HAL_Driver\Inc\stm32f0xx_hal_uart_ex.h \
-  ..\Common\common.h ..\Middlewares\LuxNET\LuxNET.h \
-  ..\Middlewares\TinyFrame\TF_Config.h \
+  ..\..\..\..\..\Common\common.h ..\..\..\..\..\Common\LuxNET.h \
+  ..\..\..\..\..\Common\TF_Config.h \
   C:\Keil\ARM\ARMCLANG\Bin\..\include\stdio.h \
   C:\Keil\ARM\ARMCLANG\Bin\..\include\stdlib.h \
   C:\Keil\ARM\ARMCLANG\Bin\..\include\signal.h

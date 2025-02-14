@@ -315,7 +315,7 @@
           </ArmAdsMisc>
           <Cads>
             <interw>1</interw>
-            <Optim>6</Optim>
+            <Optim>5</Optim>
             <oTime>0</oTime>
             <SplitLS>0</SplitLS>
             <OneElfS>1</OneElfS>
@@ -339,9 +339,9 @@
             <v6Rtti>0</v6Rtti>
             <VariousControls>
               <MiscControls></MiscControls>
-              <Define>USE_HAL_DRIVER,STM32F030x8</Define>
+              <Define>USE_HAL_DRIVER,STM32F030x8, RELAY_EXPANDER, USE_WATCHDOG</Define>
               <Undefine></Undefine>
-              <IncludePath>../Core/Inc;../Drivers/STM32F0xx_HAL_Driver/Inc;../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32F0xx/Include;../Drivers/CMSIS/Include;../Middlewares/TinyFrame;../Middlewares/LuxNET;../Common</IncludePath>
+              <IncludePath>../Core/Inc;../Drivers/STM32F0xx_HAL_Driver/Inc;../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32F0xx/Include;../Drivers/CMSIS/Include;..\..\..\..\..\Common</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -413,7 +413,7 @@
             <File>
               <FileName>TinyFrame.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Middlewares\TinyFrame\TinyFrame.c</FilePath>
+              <FilePath>..\..\..\..\..\Common\TinyFrame.c</FilePath>
             </File>
           </Files>
         </Group>
