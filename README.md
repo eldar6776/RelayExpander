@@ -31,7 +31,7 @@ Ovaj projekat predstavlja adresirani RS485 ekspander za upravljanje do 16 releja
 ## Hardver
 
 - [Shema povezivanja](shema.pdf) 
-- [PCB dizajn](pcb_files/) 
+- [PCB dizajn](pcb_files/) https://github.com/eldar6776/RelayExpander/tree/main/hw
 
 ## Softver
 
